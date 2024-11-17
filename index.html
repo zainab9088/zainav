@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Preview</title>
+    <title>Redirect Page</title>
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="GOOGLE.COM" />
     <meta property="og:description" content="www.google.com" />
     <meta property="og:image" content="https://zainab9088.github.io/zainav/google_logo.jpg" />
     <meta property="og:url" content="https://zainab9088.github.io/zainav/" />
+
+    <!-- Meta Refresh for Redirect Backup -->
+    <meta http-equiv="refresh" content="5;url=https://www.google.com" />
 </head>
 <body>
-    <h1>This is a test page for Open Graph tags</h1>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="https://www.google.com">click here</a>.</p>
+
+    <script>
+        // JavaScript Redirect
+        setTimeout(function() {
+            window.location.href = "https://www.google.com";
+        }, 5000); // Redirects after 5 seconds
+    </script>
 </body>
 </html>
