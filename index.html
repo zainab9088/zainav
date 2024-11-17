@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Open Graph Example</title>
     
-    <!-- Metadata for Facebook preview -->
-    <meta property="og:title" content="GOOGLE" />
-    <meta property="og:description" content="This is a preview of GOOGLE.COM" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/username/repository/branch-name/preview-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://GOOGLE.COM" />
-
-
-    <!-- Instant redirect to another site 
-    <meta http-equiv="refresh" content="0;url=https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60" /> -->
-    
-    <title>Redirecting...</title>
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Dynamic Website Title">
+    <meta property="og:description" content="This description changes dynamically based on time or user activity.">
+    <meta property="og:image" content="https://example.com/dynamic-image.png">
+    <meta property="og:url" content="https://example.com">
 </head>
 <body>
-<!--     <p>If you are not redirected automatically, <a href="https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60">click here</a>.</p> -->
-</body> 
+    <h1>Welcome to the Dynamic Open Graph Example</h1>
+    <p>
+        This page shows how Open Graph tags control link previews when shared on social platforms like Facebook or Twitter.
+    </p>
+
+    <!-- Redirection Link -->
+    <p>
+        <a href="https://sujandeujallc.com/" id="redirect-link">Go to My Website</a>
+    </p>
+
+    <script>
+        // Example of client-side dynamic redirection
+        document.getElementById('redirect-link').addEventListener('click', function (event) {
+            // Prevent default action
+            event.preventDefault();
+
+            // Redirect logic (change this URL to your desired destination)
+            window.location.href = "https://sujandeujallc.com/";
+        });
+    </script>
+</body>
 </html>
