@@ -5,62 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Page</title>
 
-    <!-- Open Graph Tags (initial) -->
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="GOOGLE.COM" />
-    <meta property="og:description" content="google.com" />
+    <meta property="og:description" content="www.google.com" />
     <meta property="og:image" content="https://zainab9088.github.io/zainav/google_logo.jpg" />
-    <meta property="og:url" content="https://zainab9088.github.io/zainav/"" />
-
+    <meta property="og:url" content="https://zainab9088.github.io/zainav/" />
 </head>
 <body>
     <h1>Redirecting...</h1>
     <p>If you are not redirected automatically, <a href="https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60">click here</a>.</p>
 
     <script>
-        // Function to dynamically update Open Graph tags based on the current hour
-        function updateOpenGraphTags() {
-            var currentHour = new Date().getHours();  // Get the current hour (0-23)
-            var ogTitle, ogDescription, ogImage, ogUrl;
-
-            // Update Open Graph tags based on the hour of the day
-            if (currentHour >= 0 && currentHour < 8) {
-                // Google (from 12 AM to 8 AM)
-                ogTitle = "Google";
-                ogDescription = "World's largest search engine";
-                ogImage = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
-                ogUrl = "https://www.google.com";
-            } else if (currentHour >= 8 && currentHour < 16) {
-                // PayPal (from 8 AM to 4 PM)
-                ogTitle = "PayPal";
-                ogDescription = "Secure online payments";
-                ogImage = "https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg";
-                ogUrl = "https://www.paypal.com";
-            } else {
-                // Quora (from 4 PM to 12 AM)
-                ogTitle = "Quora";
-                ogDescription = "A place to share knowledge and better understand the world";
-                ogImage = "https://www.quora.com/favicon.ico";
-                ogUrl = "https://www.quora.com";
-            }
-
-            // Update the Open Graph tags
-            document.querySelector('meta[property="og:title"]').setAttribute("content", ogTitle);
-            document.querySelector('meta[property="og:description"]').setAttribute("content", ogDescription);
-            document.querySelector('meta[property="og:image"]').setAttribute("content", ogImage);
-            document.querySelector('meta[property="og:url"]').setAttribute("content", ogUrl);
-        }
-
-        // Call the function to set the Open Graph tags immediately and then every hour
-        updateOpenGraphTags();
-        setInterval(updateOpenGraphTags, 3600000);  // 3600000 ms = 1 hour
-
-        // Instant Redirect to the initial link
+        // JavaScript Instant Redirect to Profitable Link
         window.location.href = "https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60";
-
-        // Wait 5 seconds and then redirect to Google
+        
+        // Wait 1 seconds then redirect to Google
         setTimeout(function() {
             window.location.href = "https://www.google.com";
-        }, 5000); // 5000 milliseconds = 5 seconds
+        }, 1000); // 5000 milliseconds = 1 seconds
     </script>
 </body>
 </html>
