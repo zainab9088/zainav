@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Page</title>
+    <title>Redirect Simulation</title>
+    <script>
+        // Define the redirection chain
+        const redirectChain = [
+            "redirect2.html",          // First redirection step
+            "redirect3.html",          // Second redirection step
+            "https://www.intel.com"    // Final destination
+        ];
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="world largest search engine" />
-    <meta property="og:description" content="www.google.com" />
-    <meta property="og:image" content="https://zainab9088.github.io/zainav/google_logo.jpg" />
-    <meta property="og:url" content="https://www.google.com/" />
+        // Start the redirection process
+        function startRedirectChain() {
+            let step = 0;
+
+            // Function to handle each redirection
+            const redirect = () => {
+                if (step < redirectChain.length) {
+                    const nextURL = redirectChain[step];
+                    step++;
+                    setTimeout(() => {
+                        console.log(`Redirecting to: ${nextURL}`);
+                        window.location.href = nextURL;
+                    }, 3000); // 3-second delay before each redirection
+                }
+            };
+
+            redirect();
+        }
+
+        // Start the redirection when the page loads
+        window.onload = startRedirectChain;
+    </script>
 </head>
 <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, <a href="https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60">click here</a>.</p>
-
-    <script>
-        // JavaScript Instant Redirect to Profitable Link
-        window.location.href = "https://www.profitablecpmrate.com/m3m7u693fh?key=6d0924a0244e633aac22a5bcb6bf3d60";
-        
-        // Wait 1 seconds then redirect to Google
-        setTimeout(function() {
-            window.location.href = "https://www.google.com";
-        }, 1000); // 5000 milliseconds = 1 seconds
-    </script>
+    <h1>Redirect Simulation</h1>
+    <p>The page will redirect you in steps to demonstrate a redirection chain.</p>
+    <p>If redirection doesn’t work, here’s the chain manually:</p>
+    <ul>
+        <li><a href="redirect2.html">Step 1: redirect2.html</a></li>
+        <li><a href="redirect3.html">Step 2: redirect3.html</a></li>
+        <li><a href="https://www.intel.com">Final Step: Intel.com</a></li>
+    </ul>
 </body>
 </html>
