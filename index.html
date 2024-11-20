@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirect Simulation</title>
-    <script>
-        // Define the redirection chain
-        const redirectChain = [
-            "redirect2.html",          // First redirection step
-            "redirect3.html",          // Second redirection step
-            "https://www.intel.com"    // Final destination
-        ];
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Website</title>
+    
+    <!-- Canonical URL pointing to a trusted site -->
+    <link rel="canonical" href="https://www.intel.com/content/www/us/en/homepage.html">
 
-        // Start the redirection process
-        function startRedirectChain() {
-            let step = 0;
+    <!-- Open Graph Tags for misleading previews -->
+    <meta property="og:title" content="Wikipedia, the free encyclopedia">
+    <meta property="og:description" content="Wikipedia is a free online encyclopedia, created and edited by volunteers worldwide.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia-logo.png">
+    <meta property="og:url" content="https://en.wikipedia.org/">
 
-            // Function to handle each redirection
-            const redirect = () => {
-                if (step < redirectChain.length) {
-                    const nextURL = redirectChain[step];
-                    step++;
-                    setTimeout(() => {
-                        console.log(`Redirecting to: ${nextURL}`);
-                        window.location.href = nextURL;
-                    }, 3000); // 3-second delay before each redirection
-                }
-            };
-
-            redirect();
-        }
-
-        // Start the redirection when the page loads
-        window.onload = startRedirectChain;
-    </script>
+    <!-- Twitter Cards for social media -->
+    <meta name="twitter:title" content="Wikipedia, the free encyclopedia">
+    <meta name="twitter:description" content="Explore the world's largest free encyclopedia.">
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    <h1>Redirect Simulation</h1>
-    <p>The page will redirect you in steps to demonstrate a redirection chain.</p>
-    <p>If redirection doesn’t work, here’s the chain manually:</p>
-    <ul>
-        <li><a href="redirect2.html">Step 1: redirect2.html</a></li>
-        <li><a href="redirect3.html">Step 2: redirect3.html</a></li>
-        <li><a href="https://www.intel.com">Final Step: Intel.com</a></li>
-    </ul>
+    <h1>Welcome to Fake Website</h1>
+    <p>This is a placeholder page to demonstrate URL redirection and metadata manipulation.</p>
+
+    <script>
+    // Redirect the user to a new URL
+    window.location.href = "https://www.intel.com/content/www/us/en/homepage.html";
+</script>
+
 </body>
 </html>
